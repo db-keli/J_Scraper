@@ -48,7 +48,8 @@ def send_mail():
         server = smtplib.SMTP_SSL('smtp.gmail.com',465)
         server.ehlo()
         server.ehlo()
-        server.login('kekelidompeh@gmail.com','xxxxxxxxxxxxxx')
+        # your smtp server logins
+        server.login('youremail@gmail.com','xxxxxxxxxxxxxx')
         
         subject = "Python Job Posting!"
         body = "James, your dream python job has been posted. Don't mess it up! You can check your spreadsheet or proceed with the link here: https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation="
@@ -56,7 +57,7 @@ def send_mail():
         msg = f"Subject: {subject}\n\n{body}"
 
         server.sendmail(
-            'kekelidompeh@gmail.com',
+            'youremail@gmail.com',
             msg
 
         )
