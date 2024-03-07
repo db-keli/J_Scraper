@@ -31,10 +31,10 @@ This project is a Python-based job scraping tool that extracts job listings from
     ```
 
 ## Usage
-1. Run the `scrape.py` script to start the job scraping and email automation process:
+1. Run the `schedule.sh` script to start the job scraping and email automation process:
 
     ```bash
-    python scrape.py
+    sudo ./schedule.sh
     ```
 
 ## Configuration
@@ -42,6 +42,8 @@ Modify the `scrape.py` file to customize the following settings:
 - Email sender and recipient addresses
 - SMTP server settings
 - Times Jobs website URL
+
+Modify the `schedule.sh` file to schedule the time spaces to run this script
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
