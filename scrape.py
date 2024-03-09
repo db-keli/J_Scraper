@@ -11,8 +11,9 @@ import smtplib
 
 
 def find_jobs():
+    header = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36" }
     url = "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=python&txtLocation="
-    source = requests.get(url)
+    source = requests.get(url, headers=header)
 
     source.raise_for_status()
     soup = BeautifulSoup(source.text, "html.parser")
